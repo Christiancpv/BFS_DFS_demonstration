@@ -1,0 +1,99 @@
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>  
+    <script src="search.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    
+    <title>Buscas em Grafo</title>
+</head>
+<body>
+
+    <div class="header">
+        Depth First Search and Breadth First Search
+    </div>
+    <div class = "main">
+        <div class="graph">
+            <img src="grafo.png" alt="grafo">
+        </div>
+        <div class="options">
+            <div style="text-align: center;" >
+                    <button class="btn btn-primary" onClick ="switchSearch()" id="dfs" type="submit">DFS</button>
+                    <button class="btn btn-primary" onClick ="switchSearch()" id="bfs" disabled type="submit">BFS</button>
+                    <hr>
+            </div>
+            <div>
+                    <form>
+                        <div class="form-group">
+                            <label for="begin">Path beggining</label>
+                            <select class="form-control" id="begin" onchange="setBegin()">
+                                <option>a</option>
+                                <option>b</option>
+                                <option>c</option>
+                                <option>d</option>
+                                <option>e</option>
+                                <option>f</option>
+                                <option>g</option>
+                                <option>h</option>
+                                <option>i</option>
+                                <option>j</option>
+                                <option>k</option>
+                                </select>
+                                <br>
+                                <label for="end">Path End</label>
+                            <select class="form-control" id="end">
+                                <option>a</option>
+                                <option>b</option>
+                                <option>c</option>
+                                <option>d</option>
+                                <option>e</option>
+                                <option>f</option>
+                                <option>g</option>
+                                <option>h</option>
+                                <option>i</option>
+                                <option>j</option>
+                                <option>k</option>
+                            </select>
+                        </div>
+                    </form> 
+                    <hr>    
+            </div>
+            <span>Path</span>
+            <div class="path">
+                <div class="first" id="1"></div>
+                <div id="2"></div>
+                <div id="3"></div>
+                <div id="4"></div>
+                <div id="5"></div>
+                <div id="6"></div>
+                <div id="7"></div>
+                <div id="8"></div>
+                <div id="9"></div>
+                <div id="10"></div>
+                <div id="11"></div>
+            </div>
+            <div class="controls">
+                    <button type="button" class="btn btn-success btn-lg btn-block" id="start" onclick="start()">Start</button>
+                    <button type="button" class="btn btn-danger btn-lg btn-block"  id="reset" onclick="reset()" disabled>Reset</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+            function setBegin() {
+                let x = document.getElementById("begin").value;
+                document.getElementById("1").innerHTML =  x;
+            }
+            
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>
